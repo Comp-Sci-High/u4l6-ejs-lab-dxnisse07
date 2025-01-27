@@ -6,6 +6,7 @@
     <!-- Use the category attribute to set the tab name -->
     <title><%= category%></title>
     <!-- Link to style.css -->
+    <link rel="stylesheet" href="/style.css">
     
   </head>
   <body>
@@ -27,10 +28,10 @@
       <% for (let i=0;i<items.length;i++) {%>
 
       <div class="item-card">
-        <img src="..." />
+        <img src="<%=items[i].imageUrl%>"/>
         <h3><%= items[i].name%></h3>
         <p>$<%= items[i].cost%></p>
-        <a href="...">More info</a>
+        <a href="<%=items[i].path%>">More info</a>
       </div>
       <%} %>
 

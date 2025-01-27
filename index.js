@@ -65,7 +65,7 @@ const inventory = [
 
 // Task 1: Set the view engine to EJS. 
 
-
+app.set('view engine', 'ejs')
 
 app.use((req, res, next) => {
   console.log(req.method + " " + req.path)
@@ -91,7 +91,7 @@ app.get("/mens",(req,res)=>{
 
 // Task 5: Set up the route handler for /item/0 which sends back the first item in product.ejs
 app.get("/item/0",(req,res)=>{
-  const data= inventory[0]
+  const data= inventory[0].items[0]
   res.render("product.ejs", data)
 })
 
